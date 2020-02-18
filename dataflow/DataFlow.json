@@ -1,5 +1,5 @@
 {
-	"name": "dataflow1",
+	"name": "DataFlow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
@@ -9,12 +9,12 @@
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "Source"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
-			"script": "source(output(\n\t\tAddress as string,\n\t\tCardCode as string,\n\t\tAdresType as string,\n\t\tStreet as string,\n\t\tBlock as string,\n\t\tZipCode as string,\n\t\tCity as string,\n\t\tCounty as string,\n\t\tCountry as string,\n\t\tState as string,\n\t\tObjType as string,\n\t\tLineNum as integer,\n\t\tBuilding as string,\n\t\tGSTRegnNo as string,\n\t\tGSTType as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: true,\n\tlimit: 100,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1"
+			"script": "source(output(\n\t\tAddress as string,\n\t\tCardCode as string,\n\t\tAdresType as string,\n\t\tStreet as string,\n\t\tBlock as string,\n\t\tZipCode as string,\n\t\tCity as string,\n\t\tCounty as string,\n\t\tCountry as string,\n\t\tState as string,\n\t\tObjType as string,\n\t\tLineNum as integer,\n\t\tBuilding as string,\n\t\tGSTRegnNo as string,\n\t\tGSTType as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: true,\n\tlimit: 100,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> Source"
 		}
 	}
 }
